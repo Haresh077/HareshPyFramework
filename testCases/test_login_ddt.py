@@ -3,13 +3,15 @@ import time
 from pageObjects.LoginPage import Login
 from utilities.readProperties import Readconfig
 from utilities.customLogger import LogGen
+
 from utilities import XLutilities
 
 
 class Test_002_DDT_login:
     baseURL = Readconfig.getApplicationURL()
     logger = LogGen.loggen()
-    path="D:\\Haresh\\PythonQA\\HareshTestFrameworkProject\\TestData\\Logindetails.xlsx"
+    path=".//TestData//Logindetails.xlsx"
+    logger = LogGen.loggen()  # Logger
 
     def test_login(self, setup):
         self.logger.info("**************Test_002_DDT_login***********")
@@ -29,7 +31,6 @@ class Test_002_DDT_login:
             self.lp.setusername(self.user)
             self.lp.setpassword(self.password)
             self.lp.clicklogin()
-            self.lp.clicklogout()
             time.sleep(3)
 
             act_title = self.driver.title

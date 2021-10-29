@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.service import Service
 @pytest.fixture()
 def setup(browser):
     if browser == 'chrome':
-        s = Service("D:\\Haresh\\PythonQA\\HareshTestFrameworkProject\\Drivers\\chromedriver950.exe")
+        s = Service("D:\\hareshpython\\HareshPyFramework\\Drivers\\chromedriver950.exe")
         driver = webdriver.Chrome(service=s)
         driver.maximize_window()
     elif browser == 'firefox':
@@ -13,7 +13,7 @@ def setup(browser):
     elif browser == 'IE':
         driver = webdriver.ie
     else:
-        drive = webdriver.chrome(executable_path="D:\\Haresh\\PythonQA\\HareshTestFrameworkProject\\Drivers\\chromedriver950.exe")
+        drive = webdriver.chrome(executable_path="D:\\hareshpython\\HareshPyFramework\\Drivers\\chromedriver950.exe")
     return driver
 
 
