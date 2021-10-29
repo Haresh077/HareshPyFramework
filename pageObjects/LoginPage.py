@@ -22,5 +22,7 @@ class Login:
 
     def clicklogout(self):
         self.driver.find_element_by_xpath(self.btn_logout_xpath).click()
+        
+        
 
 
