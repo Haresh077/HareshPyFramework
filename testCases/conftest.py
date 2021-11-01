@@ -5,7 +5,8 @@ from selenium.webdriver.chrome.service import Service
 @pytest.fixture()
 def setup(browser):
     if browser == 'chrome':
-        s = Service("D:\\hareshpython\\HareshPyFramework\\Drivers\\chromedriver950.exe")
+        # s = Service("D:\\hareshpython\\HareshPyFramework\\Drivers\\chromedriver950.exe")
+        s = Service("D:\\Haresh\\PythonQA\\HareshPyFramework\\Drivers\\chromedriver950.exe")  #Office PC
         driver = webdriver.Chrome(service=s)
         driver.maximize_window()
     elif browser == 'firefox':
